@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ganhou :D</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet"  href="estilo.css">
+	<script type="text/javascript">
+		function iniciarJogo(){
+		var nivel = (document.getElementById('nivel').value)
+
+		if(nivel === ''){
+			alert("Selecione um nivel para iniciar o jogo")
+		return false
+		}
+			window.location.href ="mosca_fofa.html?" + nivel
+		}
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+				<img src="imagens/game.png">
+				</div>
+			</div>
+		</div>
+
+			<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+				 <div class="mb-2">
+					<select class="form-control btn-danger"  id="nivel">
+						<option value="">--Selecione o nível--</option>	
+						<option value="d1">Normal</option>
+						<option value="d2">Difícil</option>
+						<option value="d3">Morra!</option>
+					</select>
+				 </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+					<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</head>
+<body>
+
+</body>
+</html>
